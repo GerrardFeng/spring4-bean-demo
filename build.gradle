@@ -1,0 +1,19 @@
+apply plugin: "java"
+apply plugin: "idea"
+
+project.ext {
+    springVersion = "4.0.0.RELEASE"
+}
+
+dependencies {
+    repositories {
+        mavenCentral()
+    }
+
+    compile("org.springframework:spring-core:$springVersion",
+            "org.springframework:spring-context:$springVersion")
+}
+
+//jar {
+//    from files(sourceSets.main.output.resourcesDir)
+//}
